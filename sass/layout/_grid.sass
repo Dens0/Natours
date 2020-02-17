@@ -1,0 +1,15 @@
+.row
+  max-width: $grid-width
+  background-color: #eeeeee
+  margin: 0 auto
+
+  &:not(:last-child) // wybieramy wszystko bez ostatniego elementu aby ten ostatni nie miał marginesu dolnego
+    margin-bottom: $gutter-vertical
+  @include clearfix // dodajemy nsz clear fix który stworzyliśmy w mixins
+  .col-1-of-2
+    width: calc((100% - #{$gutter-horizontal})/2) //tak zapisuje się użycie zmiennych w SASS
+    background-color: orangered
+    float: left
+
+    &:not(:last-child)
+      margin-right: $gutter-horizontal

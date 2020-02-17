@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dens0/Natours.git"
+  },
+  "author": "Adrian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dens0/Natours/issues"
+  },
+  "homepage": "https://github.com/Dens0/Natours#readme",
+  "dependencies": {
+    "node": "^13.8.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

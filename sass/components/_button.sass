@@ -1,0 +1,46 @@
+.btn
+  &:hover //animacja przycisku
+        transform: translateY(-3px)
+        box-shadow: 0 1rem 1rem rgba($colour-black,.2)
+  &:active
+    transform: translateY(-1px)
+    box-shadow: 0 .5rem 1rem rgba($colour-black,.2)
+  &::after
+    content: " "
+    display: inline-block
+    height: 100%
+    width: 100%
+    border-radius: 10rem
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transition: all .4s
+  &:hover //animacja przycisku
+        transform: translateY(-.3rem)
+        box-shadow: 0 1rem 1rem rgba(0,0,0,.2)
+        &::after
+          transform: scaleX(1.2) scaleY(1.6)
+          opacity: 0
+  &:active
+    transform: translateY(-1px)
+  &:link,&:visited //stan selektora zakotwiczajacy
+        text-transform: uppercase
+        text-decoration: none
+        display: inline-block //bez tego zajmuje czesc tekstu powyzej dlatego powinniśmy tego użyć
+        border-radius: 10rem
+        transition: all .2s //wszystkie  właściowości moga bybć animowane
+        position: relative
+        padding: 1.5rem 4rem
+        font-size: 1.6rem
+  &--white
+    background-color: $colour-white
+    color: $colour-grey-dark
+    //padding: 15px 40px
+    animation: moveInBottom
+    animation-duration: 4s
+    &::after
+      background-color: $colour-white
+  &--animated
+    animation: moveInBottom .5 ease-out
+    animation-fill-mode: backwards
