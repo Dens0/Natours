@@ -29,3 +29,16 @@ body
     letter-spacing: 1.75rem
     animation: moveInRight
     animation-duration: 2s
+.heading-secondary
+  font-size: 3.5rem
+  text-transform: uppercase
+  font-weight: 700
+  background-image: linear-gradient(to right, $colours-primary-light, $colours-primary-dark)
+  display: inline-block // Dzięki temu napis nie zajmuję całej szerokości a jedynie tyle ile potrzebuje
+  -webkit-background-clip: text // tło zostaje przycięte w miejsu gdzie jest tło
+  color: transparent
+  transition: all .5s
+  letter-spacing: 3px
+  &:hover
+    transform: skewY(-6deg) scale(1.1)
+    text-shadow: .5rem 1rem 2rem rgba($colour-black, 0.4)
