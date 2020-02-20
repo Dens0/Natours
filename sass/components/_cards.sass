@@ -1,0 +1,82 @@
+.card
+  //perspektywa polega na zdefioniowaniu perspektywy na elemencie rodzicaw którym następuje transformacja
+  //FUNCTIONALITY
+  perspective: 150rem
+  -moz-perspective: 150rem
+  position: relative
+  height: 52rem
+  text-align: right
+
+  &__side
+    height: 52rem
+    transition: all .8s ease
+    font-size: 2rem
+    //teraz będziemy użyeać pozycjonowania absolutnego i robimy to na obu kartach a na rodzicu pozycję relatywną
+    //dodatkowo elementom należy dodać szerokość ponieważ elementy dopasowują się do swojej szerokości
+    //kolejną rzeczą jest tylna widoczność  a mianowicie włąściwość backface-visibility
+    //pozycjonując zbsolutnie nasza karta traci wysokośc w wyniku czego musimy ustawić ją ręcznie, dzięki czemu  zapewnimy poprawnośc właściowści hove
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    backface-visibility: hidden
+    border-radius: 3px
+    box-shadow: 0 1.5rem 4rem rgba($colour-black, .15)
+    overflow: hidden
+
+    &--front
+      background-color: $colour-white
+    &--back
+      transform: rotateY(-180deg)
+      &-1 //konieczne było dodanie kolejnego modyfikatora do kart w html aby zadbać o kolory
+        background-image: linear-gradient(to right bottom, $colour-secondary-light, $colour-secondary-dark)
+
+
+
+  &:hover &__side--front //efekt obracania się karty
+      transform: rotateY(-180deg)
+  &:hover &__side--back //efekt obracania się karty
+      transform: rotateY(0deg)
+
+  //FRONT SIDE STYLING
+  &__picture
+    background-size: cover
+    height: 23rem
+    background-blend-mode: screen
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+
+    &--1
+      //w tym momencie dodając obraz zajmuje cały element rodzica i pokrywa się z elementem rodzica, na którym jest ustawione zaokrąglenie narożników
+      //W celu eliminacji uzywamy overflow: hidden
+      background-image: linear-gradient(to right bottom, $colour-secondary-light, $colour-secondary-dark), url(../img/nat-5.jpg)
+
+    &--2
+      background-image: url(../img/nat-5.jpg)
+    &--3
+      background-image: url(../img/nat-5.jpg)
+
+
+  &__heading
+      font-size: 2.8rem
+      font-weight: 300
+      text-transform: uppercase
+      color: $colour-white
+      text-align: right
+      position: absolute
+      top: 12rem
+      right: 2rem
+      width: 75% //Przez brak tego ustawienia napisy się  nie ułożyły jeden pod drugim
+  &__heading-span
+    padding: 1rem 1.5rem
+    //clone  powoduje to, że w momencie przejścia do nasępnej lini tworzą się tak jakby inne obiekty wraz z danymi wartościami
+    -webkit-box-decoration-break: clone
+    box-decoration-break: clone
+
+    &--1
+      background-image: linear-gradient(to right bottom, rgba($colour-secondary-light,.85),rgba($colour-secondary-dark,.85)),
+
+
+
+
+//&--back strona jest już na samym początku obrucona a w momencie najechania na kartę ustawiana jest na 0 stopni a frontowa dostaje 180stopni

@@ -2,3 +2,18 @@
   background-color: $colour-grey-light-1
   padding: 25rem
   margin-top: -20vh
+  //padding-left: 100vw
+.section-features
+  padding: 20rem 0
+  background-image: linear-gradient(to right bottom , rgba($colours-primary-light, 0.8),rgba($colours-primary-dark,0.8)) , url(../img/nat-4.jpg)
+  background-size: cover
+  //padding: 10px
+  //clip-path:
+  transform: skewY(-7deg)
+  margin-top: -10rem
+  & > * //wybieramy tylko dzieci aby naprostować
+    transform: skewY(7deg)
+.section-tours
+  background-color: $colour-grey-light-1
+  padding: 25rem 0 50rem 0
+  margin-top: -10rem
