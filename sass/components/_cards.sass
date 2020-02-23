@@ -30,6 +30,10 @@
       transform: rotateY(-180deg)
       &-1 //konieczne było dodanie kolejnego modyfikatora do kart w html aby zadbać o kolory
         background-image: linear-gradient(to right bottom, $colour-secondary-light, $colour-secondary-dark)
+      &-2 //konieczne było dodanie kolejnego modyfikatora do kart w html aby zadbać o kolory
+        background-image: linear-gradient(to right bottom, $colours-primary-light, $colours-primary-dark)
+      &-3 //konieczne było dodanie kolejnego modyfikatora do kart w html aby zadbać o kolory
+        background-image: linear-gradient(to right bottom, $colour-tertiary-light, $colour-tertiary-dark)
 
 
 
@@ -52,9 +56,11 @@
       background-image: linear-gradient(to right bottom, $colour-secondary-light, $colour-secondary-dark), url(../img/nat-5.jpg)
 
     &--2
-      background-image: url(../img/nat-5.jpg)
+      background-image: linear-gradient(to right bottom, $colours-primary-light, $colours-primary-dark), url(../img/nat-6.jpg)
+
     &--3
-      background-image: url(../img/nat-5.jpg)
+      background-image: linear-gradient(to right bottom, $colour-tertiary-light, $colour-tertiary-dark), url(../img/nat-7.jpg)
+
 
 
   &__heading
@@ -76,9 +82,9 @@
     &--1
       background-image: linear-gradient(to right bottom, rgba($colour-secondary-light,.85),rgba($colour-secondary-dark,.85))
     &--2
-      background-image: linear-gradient(to right bottom, rgba($colour-secondary-light,.85),rgba($colour-secondary-dark,.85))
+      background-image: linear-gradient(to right bottom, rgba($colours-primary-light,.85),rgba($colours-primary-dark,.85))
     &--3
-      background-image: linear-gradient(to right bottom, rgba($colour-secondary-light,.85),rgba($colour-secondary-dark,.85))
+      background-image: linear-gradient(to right bottom, rgba($colour-tertiary-light,.85),rgba($colour-tertiary-dark,.85))
 
 
 

@@ -1,0 +1,62 @@
+.story
+  width: 100%
+  margin: 0 auto
+  box-shadow: 0 3rem 6rem rgba($colour-black,.1)
+  background-color: $colour-white
+  border-radius: 3px
+  padding: 3rem 11rem
+  padding-left: 15rem
+  font-size: $default-font-size
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
+
+
+
+  &__shape
+    width: 15rem
+    height: 15rem
+    position: relative
+
+    float: left
+    -webkit-shape-outside: circle(50% at 50% 50%) // dzięki temu tekst ustawia się wokół kształtu
+    shape-outside: circle(50% at 50% 50%)
+    -webkit-clip-path: circle(50% at 50% 50%)
+    clip-path: circle(50% at 50% 50%)
+    transform: translate(-3rem, 0)
+
+  //obrazy elastyczne do responywnego projektowania  zwsze muszą mieć szerokość
+  //tutaj użyliśmy height ponieważ obraz jest szerszy niż na górze
+  &__img
+    height: 100%
+    transform: translateX(-4rem) scale(1.4)
+    transition: all .5s
+
+
+  &__caption
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,20%)
+    color: $colour-white
+    text-transform: uppercase
+    font-size: 1.7rem
+    text-align: center
+    opacity: 0
+    transition: all .5s
+    backface-visibility: hidden
+
+
+
+  &:hover &__caption
+    opacity: 1
+    transform: translate(-50%,-50%)
+
+
+  &:hover &__img
+    transform: translate(-4rem) scale(1)
+    filter: blur(3px) brightness(80%)
+
+
+
+
+

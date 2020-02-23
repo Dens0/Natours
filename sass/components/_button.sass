@@ -41,9 +41,15 @@
     animation-duration: 4s
     &::after
       background-color: $colour-white
+  &--green
+    background-color: $colours-primary
+    color: $colour-white
+    &::after
+      background-color: $colours-primary
   &--animated
     animation: moveInBottom .5 ease-out
     animation-fill-mode: backwards
+
 .btn-text
   &:link,&:visited
     font-size: $default-font-size
