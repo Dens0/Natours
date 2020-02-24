@@ -1,4 +1,9 @@
 .btn
+
+  //changes for buttons
+  border: none
+  cursor: pointer
+
   &:hover //animacja przycisku
         transform: translateY(-3px)
         box-shadow: 0 1rem 1rem rgba($colour-black,.2)
@@ -22,9 +27,10 @@
         &::after
           transform: scaleX(1.2) scaleY(1.6)
           opacity: 0
-  &:active
+  &:active,&:focus
+    outline: none
     transform: translateY(-1px)
-  &:link,&:visited //stan selektora zakotwiczajacy
+  &,&:link,&:visited //stan selektora zakotwiczajacy
         text-transform: uppercase
         text-decoration: none
         display: inline-block //bez tego zajmuje czesc tekstu powyzej dlatego powinniśmy tego użyć
