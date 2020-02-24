@@ -2,9 +2,9 @@
   width: 100%
   margin: 0 auto
   box-shadow: 0 3rem 6rem rgba($colour-black,.1)
-  background-color: $colour-white
+  background-color: rgba($colour-white, .6)
   border-radius: 3px
-  padding: 3rem 11rem
+  padding: 4rem 11rem
   padding-left: 15rem
   font-size: $default-font-size
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
@@ -16,7 +16,7 @@
     width: 15rem
     height: 15rem
     position: relative
-
+    overflow: hidden //pozwoliło uporać się z
     float: left
     -webkit-shape-outside: circle(50% at 50% 50%) // dzięki temu tekst ustawia się wokół kształtu
     shape-outside: circle(50% at 50% 50%)

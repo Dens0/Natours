@@ -105,7 +105,7 @@
     <section class="section-tours">
         <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
-                Moust popular tours
+                Most popular tours
 
             </h2>
         </div>
@@ -215,9 +215,11 @@
 
     <section class="section-stories">
         <div class="bg-video">
-            nie używamy src w tagu załącznika, ale w jego wnętrzu
-            <video  class="bg-video__content">
-
+            <!-- nie używamy src w tagu załącznika, ale w jego wnętrzu natomiast dajemy  formaty, aby mieć pewność, że będą działać na wszystkich przeglądarkach -->
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="img/video.mp4" type="video/mp4">
+                <source src="img/video.webm" type="video/webm">
+                Your browser is not supported
             </video>
         </div>
         <div class="u-center-text u-margin-bottom-big">
@@ -263,6 +265,32 @@
             <a href="#" class="btn-text">Read all stories &rightarrow; </a>
         </div>
     </section>
+
+    <section class="section-book">
+        <div class="row">
+            <div class="book">
+                <div class="book__form">
+                    <form action="#" class="form">
+                        <div class=" u-margin-bottom-medium">
+                            <h2 class="heading-secondary">
+                                Start booking now
+                            </h2>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                            <label for="name" class="form__label">Full name</label>
+                        </div>
+                        <div class="form__group">
+<!--                            kolejność nie jest przypadkowa-  działanie rodzeństwa w css + ~    -->
+                            <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                            <label for="email" class="form__label">Email address</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 </main>
 <!--<section class="grid-test">-->

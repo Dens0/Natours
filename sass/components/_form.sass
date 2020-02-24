@@ -1,0 +1,42 @@
+.form
+  &__input
+    font-size: 1.5rem
+    padding:  1.5rem 2rem
+    border-radius: 2px
+    background-color: rgba($colour-white, .9)
+    border: none
+    border-bottom: 3px solid transparent //dzięki temu nie widać przesunięcia inputów po najechaniu
+    font-family: inherit
+    width: 90%
+    display: block  // zmiana elementów liniowych na blokowe aby ustawiły się jeden pod drugim
+    color: inherit // dziedzieczenie dla inputów nie działa dlatego robimy to ręcznie
+
+    &:focus
+      outline: none
+      box-shadow: 0 1rem 2rem rgba($colour-black,.1)
+      border-bottom: 3px solid $colours-primary
+
+      //
+    &::-webkit-input-placeholder
+      color: $colour-grey-dark-2
+
+    &:focus:invalid //gdy niepoprawnie będzie wypłenione pole inputa używamy następujących reguł
+      border-bottom: 3px solid $colour-secondary-dark
+
+  &__group:not(:last-child)
+    margin-bottom: 2rem
+
+
+
+  &__label
+    font-size: 1.2rem
+    font-weight: 700
+    margin-left: 2rem
+    margin-top: .7rem
+    display: block // dla działania marginesów
+    transition: all 0.3s
+
+  &__input:placeholder-shown + &__label
+    opacity: 0 //jeśli ustawimy opacity na 0 to element nie będzie widoczny, ale nadal będzie na stronie wiec dodajemy poniższą linijkę
+    visibility: hidden
+    transform: translateY(-4rem)
