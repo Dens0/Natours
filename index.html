@@ -16,17 +16,20 @@
 
 <div class="navigation">
 
-    <input type="checkbox" class="navigation__checkbox" id="navi-toggle" >
-    <label for="navi-toggle" class="navigation__button">MENU</label>
+    <input class="navigation__checkbox" id="navi-toggle" type="checkbox">
+    <label class="navigation__button" for="navi-toggle">
+        <span class="navigation__icon">&nbsp;</span>
+
+    </label>
     <div class="navigation__background">&nbsp;</div>
 
     <nav class="navigation__nav">
         <ul class="navigation__list">
-            <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Your benefits</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Popular tours</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#"><span>01</span>About Natours</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#"><span>02</span>Your benefits</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#"><span>03</span>Popular tours</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#"><span>04</span>Stories</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#"><span>05</span>Book now</a></li>
         </ul>
     </nav>
 
@@ -338,38 +341,58 @@
 
 </main>
 
-</footer><footer class="footer">
+<footer class="footer">
 
     <div class="footer__logo-box">
 
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        <img alt="Full logo" class="footer__logo" src="img/logo-green-2x.png">
 
     </div>
 
     <div class="row">
         <div class="col-1-of-2">
-            <div class="footer__navigation " >
+            <div class="footer__navigation ">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Company</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Contact us</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Carrers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Privacy policy</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Terms</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-1-of-2">
 
             <p class="footer__copyright">
-                Built by <a href="#" class="footer__link">Adrian Sutkowski</a> with <a href="#" class="footer__link">&heartsuit;</a> and designed by
-                <a href="#" class="footer__link">Jonas Schmedtmann</a>
+                Built by <a class="footer__link" href="#">Adrian Sutkowski</a> with <a class="footer__link" href="#">&heartsuit;</a>
+                and designed by
+                <a class="footer__link" href="#">Jonas Schmedtmann</a>
             </p>
 
         </div>
     </div>
+</footer>
 
+<div class="popup">
+    <div class="popup__content">
+        <div class="popup__left">
+            <img alt="Tour photo" class="popup__img" src="img/nat-8.jpg">
+            <img alt="Tour photo" class="popup__img" src="img/nat-9.jpg">
+        </div>
+        <div class="popup__right">
+            <h2 class="heading-secondary">Start booking now</h2>
+            <h3 class="heading-tertiary">
+                Important &ndash; Please read these terms before booking
+            </h3>
+            <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto
+                corporis eos hic ipsam, iste itaque laboriosam maiores officia omnis quod quos, soluta voluptatem.
+                Aperiam aut dolorem odio placeat voluptas? <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur delectus distinctio eaque eligendi impedit ipsa ipsam laborum magni nobis odio omnis perferendis, praesentium quo voluptate. Ducimus enim quod ut?</span><span>Deleniti distinctio dolore, ea eius laboriosam nulla, possimus quasi quibusdam quidem quo ratione, recusandae tempore vero? Accusamus amet atque beatae consequuntur dolore dolorum eum ipsum, neque officiis, rerum totam ut.</span></p>
+            <a href="#" class="btn btn-green">Book now</a>
+        </div>
+    </div>
+</div>
 
-    <!--<section class="grid-test">-->
+<!--<section class="grid-test">-->
 <!--    <div class="row">-->
 <!--        <div class="col-1-of-2">-->
 <!--            col-1-of-2-->
