@@ -153,23 +153,32 @@ body {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   display: table;
+  overflow: hidden;
 }
 .popup__left {
   width: 33%;
   display: table-cell;
-  vertical-align: middle;
 }
 .popup__right {
   width: 66%;
   display: table-cell;
   vertical-align: middle;
+  padding: 3rem 5rem;
 }
 .popup__img {
   display: block;
   width: 100%;
 }
 .popup__text {
-  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid #999;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .form__input {
