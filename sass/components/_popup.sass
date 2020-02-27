@@ -6,6 +6,31 @@
   z-index: 300
   top: 0
   left: 0
+  //display: none
+  opacity: 0
+  visibility: hidden
+  transition: all .2s
+  &:target
+    opacity: 1
+    visibility: visible
+
+
+
+  &__close
+    &:link,&:visited
+      color: $colour-grey-dark
+      position: absolute
+      top: 2.5rem
+      right: 2.5rem
+      font-size: 3rem
+      text-decoration: none
+      display: inline-block
+      transition: all .2s
+      line-height: 1
+
+      &:hover
+        color: $colours-primary
+
 
 
   &__content
@@ -16,6 +41,16 @@
     border-radius: 3px
     display: table //dla nadrzędnego elementu table cell
     overflow: hidden
+    opacity: 0
+    transform: translate(-50%,-50%)scale(.2) // samo scale nie zadziała ponieważ już transformacja jest użyta w  w mixinie absolute__center
+    transition: all .4s .2s //second value is delay
+
+  &:target &__content //kiedy popup staje sie tergetem stylizyjemu element potomny
+      opacity: 1
+      transform: translate(-50%,-50%) scale(1) // samo scale nie zadziała ponieważ już transformacja jest użyta w  w mixinie absolute__center
+
+
+
 
 
   &__left
@@ -29,6 +64,8 @@
     display: table-cell // zamiast float do wyrównania wysokości pudełek
     vertical-align: middle
     padding: 3rem 5rem
+    backface-visibility: hidden
+
 
 
 
