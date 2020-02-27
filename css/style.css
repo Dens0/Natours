@@ -168,6 +168,10 @@ body {
   display: block;
   width: 100%;
 }
+.popup__text {
+  font-style: italic;
+}
+
 .form__input {
   font-size: 1.5rem;
   padding: 1.5rem 2rem;
