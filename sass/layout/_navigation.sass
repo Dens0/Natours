@@ -15,6 +15,15 @@
     box-shadow: 0 1rem 3rem rgba($colour-black,.1)
     text-align: center
     cursor: pointer
+
+    @include respond(tab-port)
+      top: 4rem
+      right: 4rem
+    @include respond(phone)
+      top: 3rem
+      right: 3rem
+
+
   &__background
     height: 6rem
     width: 6rem
@@ -27,6 +36,13 @@
     background-image: radial-gradient($colours-primary-light, $colours-primary-dark)
     //transform: scale(80)
     transition: transform .8s cubic-bezier(0,.01,.57,1.67)
+    @include respond(tab-port)
+      top: 4.5rem
+      right: 4.5rem
+    @include respond(phone)
+      top: 3.5rem
+      right: 3.5rem
+
 
   &__nav
     height: 100vh
