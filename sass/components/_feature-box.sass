@@ -9,6 +9,9 @@
   &:hover>&__icon
     background-image: linear-gradient(to right, #25c1d5, green)
 
+  @include respond(tab-port)
+    padding: 2rem
+
   &__icon
      font-size: 6rem
      margin-bottom: .5rem
@@ -18,9 +21,9 @@
      -webkit-background-clip: text // tło zostaje przycięte w miejsu gdzie jest tło
      color: transparent
      transition:  2s
-
-
-.feature-box:hover
+     @include respond(tab-port)
+        margin: 0
+  &:hover
     transform: translateY(-1px) scale(1.03)
 
 

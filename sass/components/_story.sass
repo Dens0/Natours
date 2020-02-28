@@ -1,7 +1,7 @@
 .story
   width: 100%
   margin: 0 auto
-  box-shadow: 0 3rem 6rem rgba($colour-black,.1)
+  box-shadow: 0 3rem 6rem rgba($colour-black, .1)
   background-color: rgba($colour-white, .6)
   border-radius: 3px
   padding: 4rem 11rem
@@ -9,6 +9,17 @@
   font-size: $default-font-size
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
   -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
+  @include respond(tab-port)
+    padding: 3rem 10rem
+    margin: 0 0
+    width: 100%
+  @include respond(phone)
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%)
+
+
+
+
+
 
 
 
@@ -23,6 +34,12 @@
     -webkit-clip-path: circle(50% at 50% 50%)
     clip-path: circle(50% at 50% 50%)
     transform: translate(-3rem, 0)
+    @include respond(tab-port)
+      transform: translate(-2rem, 0)
+    @include respond(phone)
+      transform: translate(-3rem, 0)
+
+
 
   //obrazy elastyczne do responywnego projektowania  zwsze muszą mieć szerokość
   //tutaj użyliśmy height ponieważ obraz jest szerszy niż na górze
@@ -55,6 +72,10 @@
   &:hover &__img
     transform: translate(-4rem) scale(1)
     filter: blur(3px) brightness(80%)
+
+
+
+
 
 
 
