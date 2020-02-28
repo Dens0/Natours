@@ -10,7 +10,8 @@
     width: 90%
     display: block  // zmiana elementów liniowych na blokowe aby ustawiły się jeden pod drugim
     color: inherit // dziedzieczenie dla inputów nie działa dlatego robimy to ręcznie
-
+    @include respond(tab-port)
+      width: 100%
     &:focus
       outline: none
       box-shadow: 0 1rem 2rem rgba($colour-black,.1)
@@ -44,6 +45,9 @@
   &__radio-group
     display: inline-block
     width: 49%
+    @include respond(tab-port)
+      width: 100%
+      margin-bottom: 2rem
 
   &__radio-input
     display: none
