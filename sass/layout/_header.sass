@@ -18,7 +18,7 @@
 
 
   //zapytanie p rozdzielczość urządzenia
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2 )
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2 )
     background-image: linear-gradient(to right bottom , rgba($colours-primary-light, 0.8),rgba($colours-primary-dark,0.8)) , url(../img/hero.jpg)
 
   @include respond(phone)
