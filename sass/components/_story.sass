@@ -27,17 +27,25 @@
     width: 15rem
     height: 15rem
     position: relative
-    overflow: hidden //pozwoliło uporać się z
+    overflow: hidden
     float: left
     -webkit-shape-outside: circle(50% at 50% 50%) // dzięki temu tekst ustawia się wokół kształtu
     shape-outside: circle(50% at 50% 50%)
-    -webkit-clip-path: circle(50% at 50% 50%)
+    border-radius: 50%
     clip-path: circle(50% at 50% 50%)
     transform: translate(-3rem, 0)
+    backface-visibility: hidden
+
+
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
+      -webkit-clip-path: circle(50% at 50% 50%)
     @include respond(tab-port)
       transform: translate(-2rem, 0)
     @include respond(phone)
       transform: translate(-3rem, 0)
+
+
 
 
 

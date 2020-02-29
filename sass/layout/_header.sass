@@ -1,14 +1,25 @@
 .header
   position: relative
-  height: 95vh
+  height: 85vh
   //Added gradiendt ro right bottom with colors and the picture
-  background-image: linear-gradient(to right bottom , rgba($colours-primary-light, 0.8),rgba($colours-primary-dark,0.8)) , url(../img/hero.jpg)
+  background-image: linear-gradient(to right bottom , rgba($colours-primary-light, 0.8),rgba($colours-primary-dark,0.8)) , url(../img/hero-small.jpg)
   background-size: cover
   background-position: top
   // do zrobienia ściecia używamy:
   //https://bennettfeely.com/clippy/  -strona która pozwala tworzyć tego typu rzeczy
-  clip-path:  polygon(0 0 , 100% 0 , 100% 75vh ,0 100% )
-  -webkit-clip-path:  polygon(0 0 , 100% 0 , 100% 75vh ,0 100% )
+
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
+    clip-path:  polygon(0 0 , 100% 0 , 100% 75vh ,0 100% )
+    -webkit-clip-path:  polygon(0 0 , 100% 0 , 100% 75vh ,0 100% )
+    height: 85vh
+
+
+
+
+  //zapytanie p rozdzielczość urządzenia
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2 )
+    background-image: linear-gradient(to right bottom , rgba($colours-primary-light, 0.8),rgba($colours-primary-dark,0.8)) , url(../img/hero.jpg)
 
   @include respond(phone)
     -webkit-clip-path:  polygon(0 0 , 100% 0 , 100% 85vh ,0 100% )
